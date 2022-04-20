@@ -1,4 +1,8 @@
 pipeline { 
+    script {
+        System.setProperty("org.jenkinsci.plugins.durabletask.BourneShellScript.LAUNCH_DIAGNOSTICS", "true");
+    }
+    
     agent { 
         docker { 
             image 'maven:3-alpine'  
