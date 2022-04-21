@@ -19,6 +19,7 @@ pipeline {
                 script {
                     System.setProperty("org.jenkinsci.plugins.durabletask.BourneShellScript.LAUNCH_DIAGNOSTICS", "true");
                 }
+                pwd
                 sh 'mvn -B -DskipTests clean package' 
             } 
         } 
