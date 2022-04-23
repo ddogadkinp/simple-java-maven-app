@@ -23,7 +23,7 @@ pipeline {
         stage('Test') { 
             steps {
                 echo "Test"
-                //sh 'mvn test' 
+                sh 'mvn test' 
             } 
           
             post { 
@@ -36,7 +36,7 @@ pipeline {
         stage('Deliver') {  
             steps { 
                 echo "Deliver"
-                //sh './jenkins/scripts/deliver.sh'  
+                sh './jenkins/scripts/deliver.sh'  
             } 
         } 
     } 
